@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>site</title>
+</head>
+<script type="text/javascript">
+
+	// https://api.telegram.org/bot1319376539:AAHfB2WJHK6_sGBqlv8jnd0OSAM9W9bKhYk/getUpdates
+	// 110831610
+	// https://api.telegram.org/bot1303662325:AAGAovKOocPNnTvAz0cUGZUWdaS9x6wE8QU/sendMessage?chat_id=1303662325&text=Hello%20World
+	// -1001460023976
+	// -1001460023976
+	// https://api.telegram.org/bot1319376539:AAHfB2WJHK6_sGBqlv8jnd0OSAM9W9bKhYk/sendMessage?chat_id=-1001460023976&text=Hello%20World
+	function send() {
+		let url = 'https://api.telegram.org/bot1303662325:AAGAovKOocPNnTvAz0cUGZUWdaS9x6wE8QU/sendMessage?chat_id=-1001460023976&text=' + msg.value;
+		let message = msg.value;
+		let xhttp = new XMLHttpRequest();
+		xhttp.open("GET", url);
+		xhttp.send();
+	}
+	document.oncontextmenu = function () {
+		return false;
+	}
+	function send2() {
+		let url = 'https://api.telegram.org/bot1319376539:AAHfB2WJHK6_sGBqlv8jnd0OSAM9W9bKhYk/sendMessage?chat_id=-1001460023976&text=' + msg.value;
+		let message = msg.value;
+		let xhttp = new XMLHttpRequest();
+		xhttp.open("GET", url);
+		xhttp.send();
+	}
+</script>
+<style type="text/css">
+	#msg {
+		margin-top: 50px;
+		font-size: 25px;
+		width: 540px
+	}
+	button {
+		margin-top: 10px;
+		font-size: 20px;
+	}
+	body {
+		background: black;
+	}
+	h1 {
+		color: #fff;
+	}
+</style>
+<body id="body">
+	<h1 align="center">TELEGRAM ANONYMOUS SENDER</h1>
+	<p align="center">
+	<input type="text" name="input" value="" id="msg"> <br>
+	<button onclick="send()">SEND MESSAGE AS BOT 1</button>
+    <button onclick="send2()">SEND MESSAGE AS BOT 2</button></p>
+</body>
+</html>
