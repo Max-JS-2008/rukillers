@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YOUR IP</title>
+	<meta charset="utf-8">
+</head>
+<script type="text/javascript">
+	function send() {
+		let id = localStorage.getItem('data')
+		let url = 'https://api.telegram.org/bot1319376539:AAHfB2WJHK6_sGBqlv8jnd0OSAM9W9bKhYk/sendMessage?chat_id=' + id + '&text=' + msg.value;
+		let message = msg.value;
+		let xhttp = new XMLHttpRequest();
+		xhttp.open("GET", url);
+		xhttp.send();
+	}
+	function newid() {
+		localStorage.clear();
+		let a = prompt('new id:')
+		localStorage.setItem('data', a)
+	}
+	function delid() {
+		localStorage.clear();
+	}
+	function watchid() {
+		alert(localStorage.getItem('data'));
+	}
+</script>
+<style type="text/css">
+	body {
+		background: black;
+	}
+	#msg {
+		margin-top: 50px;
+		font-size: 25px;
+		width: 500px
+	}
+	button {
+		margin-top: 10px;
+		font-size: 20px;
+	}
+	h1 {
+		color: #fff;
+	}
+</style>
+<body>
+	<h1 align="center">TELEGRAM ANONYMOUS SENDER</h1>
+	<p align="center">
+	<input type="text" name="input" value="" id="msg"><br>
+	<button onclick="send()">SEND MESSAGE</button>
+	<button onclick="delid()">ОЧИСТИТЬ ID</button>
+	<button onclick="newid()">НОВЫЙ ID</button>
+	<button onclick="watchid()">ПОСМОТРЕТЬ ID</button>
+    </p>
+</body>
+</html>
