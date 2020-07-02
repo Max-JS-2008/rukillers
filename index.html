@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<style type="text/css">
+	body {
+		background: black;
+	}
+	img {
+		height: 100px;
+		width: 120px;
+	}
+	h2 {
+		color: #fff;
+		margin-top: 50px;
+	}
+	#in2 {
+		margin-top: 10px;
+	}
+	.input {
+		font-size: 20px;
+		text-align: center;
+		width: 300px;
+	}
+	#button {
+		font-size: 20px;
+	}
+</style>
+<script type="text/javascript">
+	document.oncontextmenu = function () {
+		return false;
+	}
+	function signin() {
+		if (in1.value == 'admin' && in2.value == '123') {
+			window.location.replace('sender.html')
+		} else {}
+	}
+</script>
+<body id="body">
+	<p align="center"><img src="http://pngimg.com/uploads/skull/skull_PNG55.png"></p>
+	<h2 align="center">WELCOME TO RUKILLERS</h2>
+	<p align="center"><input type="text" name="input" id="in1" class="input" value=""> <br>
+	<input type="password" name="input" id="in2" class="input" value=""></p>
+	<p align="center"><button id="button" onclick="signin()">SIGN IN</button></p>
+</body>
+</html>
